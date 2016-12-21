@@ -13,8 +13,9 @@
 <h1>List of all the fighters</h1>
 <ul>
   <% @fighters.each do |f| %>
-    <li>
-      <%= f.name %>
-    </li>
+  <li>
+      <%=f.name%> <%= link_to('profile', fighter_path(f.id]) %>
+
   <% end %>
+  </li>
 </ul>

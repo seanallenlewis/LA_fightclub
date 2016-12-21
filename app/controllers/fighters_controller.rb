@@ -1,9 +1,13 @@
 class FightersController < ApplicationController
   def index
     @fighters = Fighter.all
+    
   end
 
   def show
+    @fighter = Fighter.find(params[:id])
+
+    @date = @fighter.created_at
   end
 
   def new
@@ -13,13 +17,14 @@ class FightersController < ApplicationController
   def create
     @fighter = Fighter.new(fighter_params)
     if @fighter.save
-      redirect_to fighters_path
+      redirect_to fighter_path(@fighter)
     else
       redirect_to new_fighters_path
     end
   end
 
   def edit
+    @fighter = Fighter.find(params[:id])
   end
 
   def update

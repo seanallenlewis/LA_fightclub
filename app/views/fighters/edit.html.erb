@@ -1,2 +1,19 @@
-<h1>Fighters#edit</h1>
-<p>Find me in app/views/fighters/edit.html.erb</p>
+<h1>Edit Fighter</h1>
+<div class="container">
+<%=form_for @fighter do |f| %>
+ <h2>name</h2> <%= f.text_field :name %>
+ <h2>email</h2> <%= f.text_field :email %>
+ <h2>new password</h2> <%= f.text_field :password %>
+ <h2>confirm password</h2> <%= f.text_field :password_confirmation %>
+</div>
+<div class="container">
+  <h2>age</h2> <%= f.number_field :age %>
+  <h2>weight</h2> <%= f.number_field :weight %>
+  <h2>fighting style</h2> <%= f.text_field :style %>
+
+
+
+ <%= f.submit "Save Fighter" %>
+<%= button_to "Delete Fighter" %>
+ <% end %>
+</div>

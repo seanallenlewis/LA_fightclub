@@ -1,2 +1,9 @@
-<h1>Fighters#show</h1>
-<p>Find me in app/views/fighters/show.html.erb</p>
+<div class="container">
+  <h1><%= @fighter.name.upcase %></h1>
+  <h3>Age:<%=@fighter.age%></h3>
+  <h3>Weight:<%= @fighter.weight%></h3>
+  <h3>Location: <%= @fighter.location %> </h3>
+  <h3>Member Since: <%= @date.to_s[0..10] %></h3>
+  <h3>Style: <%= @fighter.style %></h3>
+  <h3>Record:  <%=@fighter.wins%> / <%=@fighter.losses%>
+</div>
