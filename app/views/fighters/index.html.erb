@@ -1,0 +1,20 @@
+
+<%  if logged_in? %>
+<%=  link_to "Logout", logout_path, {method: "DELETE"} %>
+<% else%>
+<%= link_to "Login", new_session_path %>
+<% end %> -->
+
+<%= link_to "Sign Up",  new_fighter_path %>
+
+
+
+
+<h1>List of all the fighters</h1>
+<ul>
+  <% @fighters.each do |f| %>
+    <li>
+      <%= f.name %>
+    </li>
+  <% end %>
+</ul>
