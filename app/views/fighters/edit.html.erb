@@ -10,7 +10,7 @@
   <h2>age</h2> <%= f.number_field :age %>
   <h2>weight</h2> <%= f.number_field :weight %>
   <h2>fighting style</h2> <%= f.text_field :style %>
-
+  <h2>Location</h2> <%=f.select :location, [[" "],["Beverly Hills"],["Culver City"],["Downtown"],["East LA"],["Glendale"], ["Hollywood"],["Koreatown"],["Midcity"],["North Hollywood"],["Santa Monica"],["Silverlake"],["South LA"],["Venice"]]%>
 
 
  <%= f.submit "Save" %>

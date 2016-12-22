@@ -44,6 +44,6 @@ class FightersController < ApplicationController
   end
 
   def fighter_params
-    params.require(:fighter).permit(:name, :email, :password, :age, :weight, :style, :password_confirmation )
+    params.require(:fighter).permit(:name, :email, :password, :age, :weight, :style, :location, :password_confirmation )
   end
 end
