@@ -1,4 +1,7 @@
 class FightersController < ApplicationController
+
+  before_action :authorize, only: [:show]
+
   def index
     @fighters = Fighter.all
 
@@ -6,7 +9,6 @@ class FightersController < ApplicationController
 
   def show
     @fighter = Fighter.find(params[:id])
-
     @date = @fighter.created_at
   end
 
@@ -17,10 +19,8 @@ class FightersController < ApplicationController
   def create
     @fighter = Fighter.new(fighter_params)
     if @fighter.save
-      flash[:notice] = "saved sucessfull"
       redirect_to fighter_path(@fighter)
     else
-      flash[:notice] = "Error"
       redirect_to new_fighters_path
     end
   end
@@ -31,7 +31,7 @@ class FightersController < ApplicationController
 
   def update
     @fighter = Fighter.find(params[:id])
-    if @fighter.update_attributes(fighter_params)
+    if @fighter.update_attributes(fighter_params) and redirect_to fighter_path(@fighter)
     else
       redirect_to edit_fighter_path
     end
@@ -41,6 +41,6 @@ class FightersController < ApplicationController
   end
 
   def fighter_params
-    params.require(:fighter).permit(:name, :email, :password, :password_confirmation)
+    params.require(:fighter).permit(:name, :email, :password, :age, :weight, :style, :password_confirmation )
   end
 end
