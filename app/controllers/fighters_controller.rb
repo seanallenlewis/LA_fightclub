@@ -38,6 +38,9 @@ class FightersController < ApplicationController
   end
 
   def destroy
+    Fighter.find(params[:id]).destroy
+    flash[:success] = "Profile deleted"
+    redirect_to fighters_path
   end
 
   def fighter_params
