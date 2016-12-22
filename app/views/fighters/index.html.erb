@@ -1,10 +1,4 @@
 
-<%  if logged_in? %>
-<%=  link_to "Logout", logout_path, {method: "DELETE"} %>
-<% else%>
-<%= link_to "Login", new_session_path %>
-<% end %> -->
-
 <%= link_to "Sign Up",  new_fighter_path %>
 
 
@@ -14,7 +8,7 @@
 <ul>
   <% @fighters.each do |f| %>
   <li>
-      <%=f.name%> <%= link_to('profile', fighter_path(f.id]) %>
+      <%= link_to(f.name, fighter_path(f)) %>
 
   <% end %>
   </li>

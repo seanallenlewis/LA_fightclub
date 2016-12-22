@@ -7,3 +7,6 @@
   <h3>Style: <%= @fighter.style %></h3>
   <h3>Record:  <%=@fighter.wins%> / <%=@fighter.losses%>
 </div>
+
+<%= link_to "Edit Fighter Info", edit_fighter_path %>
+<%= link_to "Logout", logout_path, {method: "DELETE"} %>
