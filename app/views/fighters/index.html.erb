@@ -1,3 +1,6 @@
+<% if logged_in? %>
+<%= link_to "My Profile", fighter_path(current_fighter.id)%>
+<%end%>
 
 <h1>The Cage</h1>
 
