@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161221000553) do
+ActiveRecord::Schema.define(version: 20161223040548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,26 @@ ActiveRecord::Schema.define(version: 20161221000553) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "likes1"
+    t.string   "hates1"
+    t.string   "likes2"
+    t.string   "likes3"
+    t.string   "like4"
+    t.string   "likes5"
+    t.string   "likes6"
+    t.string   "likes7"
+    t.string   "likes8"
+    t.string   "like9"
+    t.string   "like10"
+    t.string   "hates2"
+    t.string   "hates3"
+    t.string   "hates4"
+    t.string   "hates5"
+    t.string   "hates6"
+    t.string   "hates7"
+    t.string   "hates8"
+    t.string   "hates9"
+    t.string   "hates10"
   end
 
 end
